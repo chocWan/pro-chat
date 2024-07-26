@@ -44,7 +44,7 @@ const ChatScrollAnchor = memo(({ target }: { target: React.RefObject<HTMLDivElem
   useEffect(() => {
     if (trackVisibility && inView) {
       current?.scrollTo({
-        behavior: 'smooth',
+        behavior: 'auto',
         left: 0,
         top: current?.scrollHeight || 99999,
       });

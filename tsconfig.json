@@ -1,19 +1,28 @@
 {
-  "include": ["src", "tests", ".dumirc.ts", "*.ts"],
   "compilerOptions": {
-    "strict": false,
-    "declaration": true,
+    "target": "es2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": false,
     "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
     "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "jsx": "react-jsx",
-    "types": ["vitest/globals", "@testing-library/jest-dom"],
-    "baseUrl": "./",
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
     "paths": {
-      "@@/*": [".dumi/tmp/*"],
-      "@/*": ["src/*"],
-      "@ant-design/pro-chat": ["src"],
-      "@ant-design/pro-chat/*": ["src/*"]
-    }
-  }
+      "@/*": ["src/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }

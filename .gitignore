@@ -4,6 +4,7 @@
 **/node_modules
 
 # production
+.next
 **/dist
 **/docs-dist
 /.vscode
@@ -15,6 +16,7 @@
 storybook-static
 npm-debug.log*
 yarn-error.log
+.env*.local
 
 /coverage
 .idea
